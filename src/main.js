@@ -1,9 +1,7 @@
 // query selector variables go here 👇
 
 var posterTitle = document.querySelector('.poster-title');
-
 var posterQuote = document.querySelector('.poster-quote');
-
 var posterImg = document.querySelector('.poster-img');
 
 var showRandom = document.querySelector('.show-random');
@@ -38,6 +36,9 @@ var savedPostersGrid = document.querySelector('.saved-posters-grid');
 
 var poster = document.querySelector('.poster');
 
+var miniPoster = document.querySelector('.mini-poster');
+
+console.log(miniPoster);
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -152,9 +153,11 @@ makePoster.addEventListener('click', function(event) {
   createMyPoster();
 });
 savePoster.addEventListener('click', saveCurrentPoster);
+savedPostersGrid.addEventListener('dblclick', deletePoster);
+
+
 
 // functions and event handlers go here 👇
-
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -185,15 +188,7 @@ function backToHome() {
 function openSavedPosters() {
   savedPostersGrid.innerHTML = '';
   for (i = 0; i < savedPostersArray.length; i++) {
-  savedPostersGrid.innerHTML += `
-  <section class="mini-poster">
-    <article class="poster">
-      <img class="poster-img" src=${savedPostersArray[i].imageURL}>
-      <h2 class="poster-title">${savedPostersArray[i].title}</h2>
-      <h4 class="poster-quote">${savedPostersArray[i].quote}</h4>
-    </article>
-  </section>`
-
+    savedPostersGrid.insertAdjacentHTML("beforebegin", "<section class='mini-poster'></section>", "afterend", "<img class='poster-img' src=${savedPostersArray[i].imageURL}", "afterend", "<h2 class='poster-title'>${savedPostersArray[i].title}</h2>", "afterend", "<h4 class='poster-quote'>${savedPostersArray[i].quote}</h4>");
 }
   mainPoster.classList.add('hidden');
   savedPosters.classList.remove('hidden');
@@ -217,9 +212,28 @@ function showMyPoster() {
       `;
 }
 
-function saveCurrentPoster(){
+function saveCurrentPoster() {
   if(savedPostersArray.includes(currentPoster)) {
   } else {
   savedPostersArray.push(currentPoster);
   }
 }
+
+function deleteArray() {
+  
+}
+
+function deletePoster() {
+  miniPoster.style.add ('.hidden') 
+  }
+
+  // savedPostersGrid.innerHTML = '';
+  // for (i = 0; i < savedPostersArray.length; i++) {
+  //   savedPostersGrid.innerHTML += `
+  //   <section class="mini-poster">
+  //    <img class="poster-img" src=${savedPostersArray[i].imageURL}>
+  //    <h2 class="poster-title">${savedPostersArray[i].title}</h2>
+  //    <h4 class="poster-quote">${savedPostersArray[i].quote}</h4> 
+  //   </section>`
+// }
+
