@@ -127,10 +127,7 @@ showForm.addEventListener('click', openForm);
 showMain.addEventListener('click', backToHome);
 showSaved.addEventListener('click', openSavedPosters);
 backToMain.addEventListener('click', backToHome);
-makePoster.addEventListener('click', function(event) {
-  event.preventDefault();
-  createMyPoster();
-});
+makePoster.addEventListener('click', createMyPoster);
 savePoster.addEventListener('click', saveCurrentPoster);
 savedPostersGrid.addEventListener('dblclick', deletePoster);
 
@@ -179,6 +176,7 @@ function openSavedPosters() {
 }
 
 function createMyPoster() {
+  event.preventDefault();
   currentPoster = new Poster (imageInput.value, titleInput.value, quoteInput.value);
     images.push(imageInput.value);
     titles.push(titleInput.value);
