@@ -64,7 +64,7 @@ opem index.html
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-![Main Page](https://ibb.co/Sr7mTwc)
+![Main Page](https://i.imgur.com/o9Uvrbg.png)
 
 ### Show a random poster generated with stored values
   * Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
