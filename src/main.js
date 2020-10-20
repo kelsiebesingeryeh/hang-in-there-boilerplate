@@ -1,23 +1,22 @@
 // query selector variables go here 👇
-
+var mainPoster = document.querySelector('.main-poster');
 var posterTitle = document.querySelector('.poster-title');
 var posterQuote = document.querySelector('.poster-quote');
 var posterImg = document.querySelector('.poster-img');
-var showRandomButton = document.querySelector('.show-random');
-var showFormButton = document.querySelector('.show-form');
 var posterForm = document.querySelector('.poster-form');
-var mainPoster = document.querySelector('.main-poster');
-var showMainButton = document.querySelector('.show-main');
-var savedPosters = document.querySelector('.saved-posters');
-var showSavedButton = document.querySelector('.show-saved');
-var backToMainButton = document.querySelector('.back-to-main');
-var makePosterButton = document.querySelector('.make-poster');
 var titleInput = document.querySelector('#poster-title');
 var quoteInput = document.querySelector('#poster-quote');
 var imageInput = document.querySelector('#poster-image-url');
-var savePosterButton = document.querySelector('.save-poster');
+var savedPosters = document.querySelector('.saved-posters');
 var savedPostersGrid = document.querySelector('.saved-posters-grid');
 var poster = document.querySelector('.poster');
+var showRandomButton = document.querySelector('.show-random');
+var showFormButton = document.querySelector('.show-form');
+var showSavedButton = document.querySelector('.show-saved');
+var backToMainButton = document.querySelector('.back-to-main');
+var makePosterButton = document.querySelector('.make-poster');
+var savePosterButton = document.querySelector('.save-poster');
+var showMainButton = document.querySelector('.show-main');
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -133,14 +132,15 @@ makePosterButton.addEventListener('click', function(event) {
 });
 savePosterButton.addEventListener('click', saveCurrentPoster);
 savedPostersGrid.addEventListener('dblclick', deletePoster);
-// functions and event handlers go here 👇
 
+// functions and event handlers go here 👇
 // (we've provided one for you to get you started)!
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-reloadPoster();
+window.onload = reloadPoster;
 
 function reloadPoster() {
   titlesIndex = getRandomIndex(titles);
@@ -162,6 +162,7 @@ function backToHome() {
 
 function openSavedPosters() {
   savedPostersGrid.innerHTML = '';
+  
   for (var i = 0; i < mySavedPosters.length; i++) {
     savedPostersGrid.innerHTML += `
         <section id=${mySavedPosters[i].id} class="mini-poster">
@@ -177,6 +178,7 @@ function openSavedPosters() {
 
 function createMyPoster() {
   currentPoster = new Poster(imageInput.value, titleInput.value, quoteInput.value);
+  
   images.push(imageInput.value);
   titles.push(titleInput.value);
   quotes.push(quoteInput.value);
@@ -201,10 +203,10 @@ function saveCurrentPoster() {
 function deletePoster(event) {
   for (var i = 0; i < mySavedPosters.length; i++) {
     var idCheck = mySavedPosters[i].id.toString();
+    
     if (event.target.closest('section').id === idCheck) {
       mySavedPosters.splice(i, 1);
     }
   }
-  
   openSavedPosters();
 }
