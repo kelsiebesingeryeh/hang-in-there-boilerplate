@@ -14,13 +14,13 @@
 * [Acknowledgements](#acknowledgements)
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 ![Main Page](https://i.imgur.com/o9Uvrbg.png)
 
 We were tasked with creating a random poster generator that would generate a random poster using pre-assigned data as well as generating a unique poster filled with user inputs. When a user clicked on the “show another random poster” button, the poster generated a random image, title and quote. 
+
 
 ### Built With
 * HTML
@@ -34,6 +34,7 @@ We were tasked with creating a random poster generator that would generate a ran
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -41,6 +42,7 @@ This is an example of how to list things you need to use the software and how to
 ```sh
 npm install npm@latest -g
 ```
+
 
 ### Installation
 
@@ -60,24 +62,40 @@ opem index.html
 ```
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Show a random poster generated with stored values
+*Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
+*Returns these array indices into a class constructor
+*Assigns this instance to variable currentPoster
+*Reloads currentPoster
 
 ![Poster Form](https://i.imgur.com/ggYq2ZK.png)
+###Generate a new poster using input values
+*Takes values from the user input fields and creates an instance of the Poster class using these inputs.
+*Assigns variable currentPoster to this new instance
+*Stores input values in the respective arrays for future random poster creation
+*Hides poster form element and shows main poster element
+
 ![Make Your Own Poster](https://i.imgur.com/C84Cb5N.png)
+### Save a poster to the mySavedPosters array
+*Takes currentPoster object and pushes it to the mySavedPosters array if it is not already in the array.
+
 ![Saved Posters](https://i.imgur.com/g2LBKMs.png)
+### View a grid of saved posters
+*When the Show Saved Posters button, iterate over the mySavedPosters array and add sections to the grid element present in the html
+reloads the savedPostersGrid after adding the elements.
+
+### Delete a poster from the grid on a double click
+*On a double click event, the closest section in the savedPostersGrid is identified using the id assigned from the Poster class constructor. 
+*Iterate over the savedPostersArray and splice out the object whose id matches the sections.
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
+See the [open issues](https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -92,12 +110,10 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
@@ -106,7 +122,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Names - [Matthew Dean](deanma95@gmail.com), [Kelsie Besinger Yeh](kelsiebesinger@gmail.com)
 
 Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
