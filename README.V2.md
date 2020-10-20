@@ -64,7 +64,7 @@ opem index.html
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-[Main Page](https://ibb.co/Sr7mTwc)
+![Main Page](https://ibb.co/Sr7mTwc)
 
 ### Show a random poster generated with stored values
   * Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
@@ -186,10 +186,11 @@ Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](h
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* 
 
-
-
+  * Scott Ertmer - Project manager - Pretty cool!
+  * Hilary Lewis - Formal code review
+  * Adam Vinueza - Mentor
+  * Taylor Johnson - Troubleshooting
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -197,8 +198,3 @@ Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](h
 [Saved Posters](https://ibb.co/gtPXsZG)
 [Main Page](https://ibb.co/Sr7mTwc)
 [Poster Form](https://ibb.co/L8YKJ1m)
-
-
-
-
-
