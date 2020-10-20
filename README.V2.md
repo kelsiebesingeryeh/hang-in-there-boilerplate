@@ -129,7 +129,7 @@ Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](h
 [Saved Posters](https://ibb.co/gtPXsZG)
 [Main Page](https://ibb.co/Sr7mTwc)
 [Poster Form](https://ibb.co/L8YKJ1m)
-[Make Your Own Poster](https://ibb.co/KsRVjMP
+[Make Your Own Poster](https://ibb.co/KsRVjMP)
 
 
 
