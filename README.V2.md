@@ -66,6 +66,7 @@ opem index.html
 ## Usage
 
 [Main Page](https://ibb.co/Sr7mTwc)
+
 ### Show a random poster generated with stored values
 *Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
 *Returns these array indices into a class constructor
@@ -83,7 +84,8 @@ function reloadPoster() {
 
 
 ![Poster Form](https://i.imgur.com/ggYq2ZK.png)
-###Generate a new poster using input values
+
+### Generate a new poster using input values
 *Takes values from the user input fields and creates an instance of the Poster class using these inputs.
 *Assigns variable currentPoster to this new instance
 *Stores input values in the respective arrays for future random poster creation
@@ -109,6 +111,7 @@ function createMyPoster() {
 
 
 ![Saved Posters](https://i.imgur.com/g2LBKMs.png)
+
 ### View a grid of saved posters
 *When the Show Saved Posters button, iterate over the mySavedPosters array and add sections to the grid element present in the html
 reloads the savedPostersGrid after adding the elements.
