@@ -126,10 +126,7 @@ showFormButton.addEventListener('click', openForm);
 showMainButton.addEventListener('click', backToHome);
 showSavedButton.addEventListener('click', openSavedPosters);
 backToMainButton.addEventListener('click', backToHome);
-makePosterButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  createMyPoster();
-});
+makePosterButton.addEventListener('click', createMyPoster);
 savePosterButton.addEventListener('click', saveCurrentPoster);
 savedPostersGrid.addEventListener('dblclick', deletePoster);
 
@@ -162,7 +159,7 @@ function backToHome() {
 
 function openSavedPosters() {
   savedPostersGrid.innerHTML = '';
-  
+
   for (var i = 0; i < mySavedPosters.length; i++) {
     savedPostersGrid.innerHTML += `
         <section id=${mySavedPosters[i].id} class="mini-poster">
@@ -177,8 +174,9 @@ function openSavedPosters() {
 }
 
 function createMyPoster() {
+  event.preventDefault();
   currentPoster = new Poster(imageInput.value, titleInput.value, quoteInput.value);
-  
+
   images.push(imageInput.value);
   titles.push(titleInput.value);
   quotes.push(quoteInput.value);
@@ -203,7 +201,7 @@ function saveCurrentPoster() {
 function deletePoster(event) {
   for (var i = 0; i < mySavedPosters.length; i++) {
     var idCheck = mySavedPosters[i].id.toString();
-    
+
     if (event.target.closest('section').id === idCheck) {
       mySavedPosters.splice(i, 1);
     }
