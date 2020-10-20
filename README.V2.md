@@ -83,6 +83,7 @@ function reloadPoster() {
 ```
 
 
+
 ![Poster Form](https://i.imgur.com/ggYq2ZK.png)
 
 ### Generate a new poster using input values
@@ -111,6 +112,7 @@ function createMyPoster() {
   * Takes currentPoster object and pushes it to the mySavedPosters array if it is not already in the array.
 
 
+
 ![Saved Posters](https://i.imgur.com/g2LBKMs.png)
 
 ### View a grid of saved posters
@@ -135,6 +137,7 @@ function openSavedPosters() {
 ```
 
 
+
 ### Delete a poster from the grid on a double click
   * On a double click event, the closest section in the savedPostersGrid is identified using the id assigned from the Poster class constructor. 
   * Iterate over the savedPostersArray and splice out the object whose id matches the sections.
@@ -150,6 +153,7 @@ function deletePoster(event) {
   openSavedPosters();
 }
 ```
+
 
 
 <!-- ROADMAP -->
