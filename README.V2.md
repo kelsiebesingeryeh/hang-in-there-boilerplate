@@ -31,7 +31,6 @@ We were tasked with creating a random poster generator that would generate a ran
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 
@@ -68,10 +67,11 @@ opem index.html
 [Main Page](https://ibb.co/Sr7mTwc)
 
 ### Show a random poster generated with stored values
-*Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
-*Returns these array indices into a class constructor
-*Assigns this instance to variable currentPoster
-*Reloads currentPoster
+  * Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
+  * Returns these array indices into a class constructor
+  * Assigns this instance to variable currentPoster
+  * Reloads currentPoster
+
 ```javaScript
 function reloadPoster() {
   titlesIndex = getRandomIndex(titles);
@@ -86,10 +86,11 @@ function reloadPoster() {
 ![Poster Form](https://i.imgur.com/ggYq2ZK.png)
 
 ### Generate a new poster using input values
-*Takes values from the user input fields and creates an instance of the Poster class using these inputs.
-*Assigns variable currentPoster to this new instance
-*Stores input values in the respective arrays for future random poster creation
-*Hides poster form element and shows main poster element
+  * Takes values from the user input fields and creates an instance of the Poster class using these inputs.
+  * Assigns variable currentPoster to this new instance
+  * Stores input values in the respective arrays for future random poster creation
+  * Hides poster form element and shows main poster element
+  
 ```javsScript
 function createMyPoster() {
   event.preventDefault();
@@ -107,13 +108,13 @@ function createMyPoster() {
 
 
 ### Save a poster to the mySavedPosters array
-*Takes currentPoster object and pushes it to the mySavedPosters array if it is not already in the array.
+  * Takes currentPoster object and pushes it to the mySavedPosters array if it is not already in the array.
 
 
 ![Saved Posters](https://i.imgur.com/g2LBKMs.png)
 
 ### View a grid of saved posters
-*When the Show Saved Posters button, iterate over the mySavedPosters array and add sections to the grid element present in the html
+  * When the Show Saved Posters button, iterate over the mySavedPosters array and add sections to the grid element present in the html
 reloads the savedPostersGrid after adding the elements.
 ```javaScript
 function openSavedPosters() {
@@ -135,8 +136,8 @@ function openSavedPosters() {
 
 
 ### Delete a poster from the grid on a double click
-*On a double click event, the closest section in the savedPostersGrid is identified using the id assigned from the Poster class constructor. 
-*Iterate over the savedPostersArray and splice out the object whose id matches the sections.
+  * On a double click event, the closest section in the savedPostersGrid is identified using the id assigned from the Poster class constructor. 
+  * Iterate over the savedPostersArray and splice out the object whose id matches the sections.
 ```javaScript
 function deletePoster(event) {
   for (var i = 0; i < mySavedPosters.length; i++) {
