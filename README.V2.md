@@ -37,7 +37,6 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * JavaScript
 
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -78,6 +77,9 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
+![Poster Form](https://i.imgur.com/ggYq2ZK.png)
+![Make Your Own Poster](https://i.imgur.com/C84Cb5N.png)
+![Saved Posters](https://i.imgur.com/g2LBKMs.png)
 
 
 <!-- ROADMAP -->
