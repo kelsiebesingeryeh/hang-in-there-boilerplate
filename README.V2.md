@@ -65,11 +65,22 @@ opem index.html
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+[Main Page](https://ibb.co/Sr7mTwc)
 ### Show a random poster generated with stored values
 *Accesses images, titles, and quotes arrays using a randomly generated integer within the array range.
 *Returns these array indices into a class constructor
 *Assigns this instance to variable currentPoster
 *Reloads currentPoster
+```javaScript
+function reloadPoster() {
+  titlesIndex = getRandomIndex(titles);
+  quotesIndex = getRandomIndex(quotes);
+  imagesIndex = getRandomIndex(images);
+  currentPoster = new Poster(images[imagesIndex], titles[titlesIndex], quotes[quotesIndex]);
+  showMyPoster();
+}
+```
+
 
 ![Poster Form](https://i.imgur.com/ggYq2ZK.png)
 ###Generate a new poster using input values
@@ -77,19 +88,64 @@ opem index.html
 *Assigns variable currentPoster to this new instance
 *Stores input values in the respective arrays for future random poster creation
 *Hides poster form element and shows main poster element
+```javsScript
+function createMyPoster() {
+  event.preventDefault();
+  currentPoster = new Poster(imageInput.value, titleInput.value, quoteInput.value);
 
-![Make Your Own Poster](https://i.imgur.com/C84Cb5N.png)
+  images.push(imageInput.value);
+  titles.push(titleInput.value);
+  quotes.push(quoteInput.value);
+
+  showMyPoster();
+  backToHome();
+}
+```
+
+
+
 ### Save a poster to the mySavedPosters array
 *Takes currentPoster object and pushes it to the mySavedPosters array if it is not already in the array.
+
 
 ![Saved Posters](https://i.imgur.com/g2LBKMs.png)
 ### View a grid of saved posters
 *When the Show Saved Posters button, iterate over the mySavedPosters array and add sections to the grid element present in the html
 reloads the savedPostersGrid after adding the elements.
+```javaScript
+function openSavedPosters() {
+  savedPostersGrid.innerHTML = '';
+
+  for (var i = 0; i < mySavedPosters.length; i++) {
+    savedPostersGrid.innerHTML += `
+        <section id=${mySavedPosters[i].id} class="mini-poster">
+            <img class="poster-img" src=${mySavedPosters[i].imageURL}>
+            <h2 class="poster-title">${mySavedPosters[i].title}</h2>
+            <h4 class="poster-quote">${mySavedPosters[i].quote}</h4>
+        </section>`;
+  }
+
+  mainPoster.classList.add('hidden');
+  savedPosters.classList.remove('hidden');
+}
+```
+
 
 ### Delete a poster from the grid on a double click
 *On a double click event, the closest section in the savedPostersGrid is identified using the id assigned from the Poster class constructor. 
 *Iterate over the savedPostersArray and splice out the object whose id matches the sections.
+```javaScript
+function deletePoster(event) {
+  for (var i = 0; i < mySavedPosters.length; i++) {
+    var idCheck = mySavedPosters[i].id.toString();
+
+    if (event.target.closest('section').id === idCheck) {
+      mySavedPosters.splice(i, 1);
+    }
+  }
+  openSavedPosters();
+}
+```
 
 
 <!-- ROADMAP -->
@@ -137,7 +193,6 @@ Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](h
 [Saved Posters](https://ibb.co/gtPXsZG)
 [Main Page](https://ibb.co/Sr7mTwc)
 [Poster Form](https://ibb.co/L8YKJ1m)
-[Make Your Own Poster](https://ibb.co/KsRVjMP)
 
 
 
