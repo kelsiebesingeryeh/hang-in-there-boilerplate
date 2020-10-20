@@ -126,10 +126,10 @@ Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: (https://ibb.co/gtPXsZG)
-[ ]:(https://ibb.co/Sr7mTwc)
-[ ]:(https://ibb.co/L8YKJ1m)
-[ ]:(https://ibb.co/KsRVjMP
+[Saved Posters](https://ibb.co/gtPXsZG)
+[Main Page](https://ibb.co/Sr7mTwc)
+[Poster Form](https://ibb.co/L8YKJ1m)
+[Make Your Own Poster](https://ibb.co/KsRVjMP
 
 
 
