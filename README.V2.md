@@ -126,4 +126,12 @@ Project Link: [https://github.com/kelsiebesingeryeh/hang-in-there-boilerplate](h
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: (https://ibb.co/gtPXsZG)
+[ ]:(https://ibb.co/Sr7mTwc)
+[ ]:(https://ibb.co/L8YKJ1m)
+[ ]:(https://ibb.co/KsRVjMP
+
+
+
+
+
