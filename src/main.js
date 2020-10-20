@@ -175,8 +175,13 @@ function openSavedPosters() {
 
 function createMyPoster() {
   event.preventDefault();
-  currentPoster = new Poster(imageInput.value, titleInput.value, quoteInput.value);
+  if (imageInput.value == '' || titleInput.value == '' || quoteInput.value == '') {
+    alert('Missing an input ya dummy!');
+   return
+  }
 
+  currentPoster = new Poster(imageInput.value, titleInput.value, quoteInput.value);
+  
   images.push(imageInput.value);
   titles.push(titleInput.value);
   quotes.push(quoteInput.value);
@@ -208,3 +213,5 @@ function deletePoster(event) {
   }
   openSavedPosters();
 }
+
+
