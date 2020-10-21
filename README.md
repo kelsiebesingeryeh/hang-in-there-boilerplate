@@ -57,7 +57,7 @@ npm install
 
 4. Open web page
 ```sh
-opem index.html
+open index.html
 ```
 
 
